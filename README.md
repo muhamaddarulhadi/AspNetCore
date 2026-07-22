@@ -2,7 +2,7 @@
 
 A single-page, self-contained training reference for junior ASP.NET Core developers — no build step, no dependencies to install, just one HTML file you can open in a browser or host anywhere as a static site.
 
-**🔗 Live demo:** `[https://<your-github-username>.github.io/<your-repo-name>/](https://muhamaddarulhadi.github.io/AspNetCore)`
+**🔗 Live demo:** `[https://muhamaddarulhadi.github.io/AspNetCore]`
 
 ---
 
