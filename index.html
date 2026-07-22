@@ -1,0 +1,1614 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASP.NET Core Developer Learning Guide</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,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">
+<style>
+/* ======================================================================
+   DESIGN TOKENS
+   ====================================================================== */
+:root{
+  --blue: #0F6CBD;
+  --blue-dark: #0A4E8C;
+  --blue-tint: #E8F2FC;
+  --cyan: #00B7C3;
+  --purple: #8764B8;
+  --teal: #038387;
+  --green: #107C10;
+  --amber: #C87F0A;
+  --red: #C4314B;
+
+  --bg: #FAFAFA;
+  --bg-raised: #FFFFFF;
+  --bg-sunken: #F1F1F1;
+  --surface: #FFFFFF;
+  --border: #E3E2E0;
+  --border-strong: #C9C8C6;
+  --text: #1B1A19;
+  --text-secondary: #5C5A57;
+  --text-muted: #8B8987;
+  --code-bg: #1E1E1E;
+  --code-text: #D4D4D4;
+
+  --shadow-sm: 0 1px 2px rgba(20,20,20,0.06), 0 1px 1px rgba(20,20,20,0.04);
+  --shadow-md: 0 4px 14px rgba(20,20,20,0.09), 0 1px 3px rgba(20,20,20,0.06);
+  --shadow-lg: 0 12px 32px rgba(20,20,20,0.16), 0 2px 6px rgba(20,20,20,0.08);
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+
+  --sidebar-w: 272px;
+  --toc-w: 236px;
+  --topbar-h: 52px;
+  --progress-h: 3px;
+
+  --font-display: "Segoe UI Semibold", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  --font-ui: "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "Cascadia Code", "Consolas", "SFMono-Regular", Menlo, Monaco, monospace;
+}
+[data-theme="dark"]{
+  --blue: #4CB2F0;
+  --blue-dark: #7EC5F7;
+  --blue-tint: #16283A;
+
+  --bg: #14181F;
+  --bg-raised: #1B2029;
+  --bg-sunken: #0F1319;
+  --surface: #1B2029;
+  --border: #2C323D;
+  --border-strong: #3B4250;
+  --text: #F0F1F3;
+  --text-secondary: #B7BCC5;
+  --text-muted: #7C8291;
+  --code-bg: #0F1319;
+  --code-text: #D4D4D4;
+
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.35);
+  --shadow-md: 0 6px 18px rgba(0,0,0,0.45);
+  --shadow-lg: 0 16px 40px rgba(0,0,0,0.55);
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  *{animation-duration:0.001ms !important; transition-duration:0.001ms !important;}
+}
+
+body{
+  margin:0;
+  font-family:var(--font-ui);
+  background:var(--bg);
+  color:var(--text);
+  font-size:15.5px;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  transition:background 0.2s ease, color 0.2s ease;
+}
+
+a{color:var(--blue); text-decoration:none;}
+a:hover{text-decoration:underline;}
+:focus-visible{outline:2px solid var(--blue); outline-offset:2px; border-radius:2px;}
+
+.icon{width:1em; height:1em; fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; vertical-align:-0.15em; flex-shrink:0;}
+.icon-fill{fill:currentColor; stroke:none;}
+
+/* ======================================================================
+   TOP BAR + PROGRESS
+   ====================================================================== */
+.topbar{
+  position:fixed; top:0; left:0; right:0; height:var(--topbar-h);
+  background:linear-gradient(135deg, var(--blue-dark), #073A6B 130%);
+  color:#fff;
+  display:flex; align-items:center;
+  padding:0 18px;
+  z-index:1000;
+  gap:14px;
+}
+[data-theme="dark"] .topbar{ background:linear-gradient(135deg, #0A2A45, #061A2E 130%); }
+.progress-track{
+  position:fixed; top:var(--topbar-h); left:0; right:0; height:var(--progress-h);
+  background:var(--bg-sunken); z-index:999;
+}
+.progress-bar{
+  height:100%; width:0%;
+  background:linear-gradient(90deg, var(--cyan), var(--blue));
+  transition:width 0.1s linear;
+}
+
+.topbar .brand{
+  display:flex; align-items:center; gap:10px;
+  font-family:var(--font-display);
+  font-weight:700; font-size:15px; white-space:nowrap; letter-spacing:0.01em;
+}
+.topbar .brand .icon{font-size:22px; color:#7EC5F7;}
+.topbar .menu-toggle{
+  display:none; background:none; border:none; color:#fff; cursor:pointer; padding:6px; border-radius:6px;
+}
+.topbar .menu-toggle .icon{font-size:20px;}
+.topbar .menu-toggle:hover{background:rgba(255,255,255,0.12);}
+
+.topbar-search{ flex:1; max-width:460px; position:relative; margin-left:6px; }
+.topbar-search .icon{position:absolute; left:11px; top:50%; transform:translateY(-50%); color:rgba(255,255,255,0.65); font-size:14px;}
+.topbar-search input{
+  width:100%; padding:7px 12px 7px 34px; border-radius:20px; border:1px solid rgba(255,255,255,0.22);
+  background:rgba(255,255,255,0.1); color:#fff; font-size:13.5px; transition:background 0.15s, border-color 0.15s;
+}
+.topbar-search input::placeholder{color:rgba(255,255,255,0.62);}
+.topbar-search input:focus{background:rgba(255,255,255,0.16); border-color:rgba(255,255,255,0.4); outline:none;}
+
+.topbar-actions{margin-left:auto; display:flex; align-items:center; gap:4px;}
+.icon-btn{
+  background:none; border:none; color:#fff; cursor:pointer;
+  width:36px; height:36px; border-radius:8px; display:flex; align-items:center; justify-content:center;
+  transition:background 0.15s, transform 0.15s;
+}
+.icon-btn .icon{font-size:17px;}
+.icon-btn:hover{background:rgba(255,255,255,0.15);}
+.icon-btn:active{transform:scale(0.92);}
+
+/* ======================================================================
+   LAYOUT
+   ====================================================================== */
+.app-shell{ display:flex; padding-top:calc(var(--topbar-h) + var(--progress-h)); min-height:100vh; }
+
+.sidebar{
+  position:fixed; top:calc(var(--topbar-h) + var(--progress-h)); left:0; bottom:0; width:var(--sidebar-w);
+  background:var(--bg-raised); border-right:1px solid var(--border);
+  overflow-y:auto; padding:18px 0 60px;
+  z-index:900;
+  scrollbar-width:thin;
+}
+.sidebar::-webkit-scrollbar{width:8px;}
+.sidebar::-webkit-scrollbar-thumb{background:var(--border-strong); border-radius:4px;}
+
+.sidebar-section{margin-bottom:6px;}
+.sidebar-title{
+  font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-muted);
+  padding:16px 22px 8px; font-weight:700;
+}
+.sidebar a.nav-link{
+  display:flex; align-items:center; gap:10px;
+  margin:1px 10px; padding:8px 12px; color:var(--text-secondary); font-size:13.5px;
+  border-radius:8px; text-decoration:none; position:relative; transition:background 0.15s, color 0.15s;
+}
+.sidebar a.nav-link:hover{background:var(--bg-sunken); color:var(--text);}
+.sidebar a.nav-link.active{
+  background:var(--blue-tint); color:var(--blue-dark); font-weight:700;
+}
+.sidebar .nav-num{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:22px; height:22px; border-radius:6px; font-weight:700; color:var(--text-muted); font-size:11px;
+  background:var(--bg-sunken); flex-shrink:0;
+}
+.sidebar a.nav-link.active .nav-num{ background:var(--blue); color:#fff; }
+
+.content-col{
+  margin-left:var(--sidebar-w);
+  margin-right:var(--toc-w);
+  flex:1;
+  padding:36px 44px 100px;
+  min-width:0;
+  max-width:900px;
+}
+
+.toc{
+  position:fixed; top:calc(var(--topbar-h) + var(--progress-h)); right:0; width:var(--toc-w);
+  bottom:0; overflow-y:auto; padding:28px 22px 60px;
+}
+.toc-title{font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-muted); font-weight:700; margin-bottom:12px;}
+.toc ul{list-style:none; margin:0; padding:0; position:relative;}
+.toc ul::before{content:""; position:absolute; left:0; top:0; bottom:0; width:2px; background:var(--border);}
+.toc li a{
+  display:block; padding:5px 0 5px 14px; font-size:12.5px; color:var(--text-secondary);
+  border-left:2px solid transparent; margin-left:-2px; line-height:1.4; transition:color 0.15s, border-color 0.15s;
+}
+.toc li a:hover{color:var(--blue); text-decoration:none;}
+.toc li a.active{color:var(--blue); border-left-color:var(--blue); font-weight:700;}
+
+/* ======================================================================
+   TYPOGRAPHY / HERO
+   ====================================================================== */
+.page-hero{margin-bottom:8px; position:relative;}
+.hero-kicker{
+  display:inline-flex; align-items:center; gap:6px;
+  color:var(--blue); font-weight:700; font-size:12px; text-transform:uppercase; letter-spacing:0.08em;
+  background:var(--blue-tint); padding:4px 10px; border-radius:20px; margin-bottom:14px;
+}
+.page-hero h1{
+  font-family:var(--font-display);
+  font-size:2.75rem; font-weight:700; margin:0 0 12px; letter-spacing:-0.02em; line-height:1.12;
+}
+.page-hero p.lead{font-size:1.15rem; color:var(--text-secondary); max-width:640px; margin:0 0 18px;}
+.hero-meta{display:flex; gap:18px; color:var(--text-muted); font-size:13px; margin-bottom:30px; flex-wrap:wrap;}
+.hero-meta span{display:flex; align-items:center; gap:6px;}
+
+section.doc-section{
+  padding-top:28px; margin-top:12px; border-top:1px solid var(--border);
+  opacity:0; transform:translateY(14px); transition:opacity 0.5s ease, transform 0.5s ease;
+}
+section.doc-section.in-view{opacity:1; transform:translateY(0);}
+section.doc-section:first-of-type{border-top:none;}
+.section-eyebrow{
+  color:var(--blue); font-weight:700; font-size:12px; text-transform:uppercase; letter-spacing:0.08em;
+  display:flex; align-items:center; gap:8px;
+}
+.section-eyebrow .num-badge{
+  width:26px; height:26px; border-radius:7px; background:var(--blue); color:#fff;
+  display:inline-flex; align-items:center; justify-content:center; font-size:12px; font-family:var(--font-mono);
+}
+.doc-section h2{
+  font-family:var(--font-display);
+  font-size:1.85rem; font-weight:700; margin:8px 0 4px; padding-top:6px; scroll-margin-top:76px; letter-spacing:-0.01em;
+}
+.doc-section h3{font-size:1.28rem; font-weight:700; margin:30px 0 12px; scroll-margin-top:76px;}
+.doc-section h4{font-size:1.03rem; font-weight:700; margin:20px 0 8px; color:var(--text);}
+.doc-section p{margin:0 0 15px; color:var(--text-secondary);}
+.doc-section ul, .doc-section ol{color:var(--text-secondary); margin:0 0 15px; padding-left:22px;}
+.doc-section li{margin-bottom:6px;}
+.doc-section strong{color:var(--text); font-weight:700;}
+
+/* ======================================================================
+   CALLOUTS
+   ====================================================================== */
+.callout{
+  display:flex; gap:12px;
+  border:1px solid var(--border); border-left:4px solid var(--blue);
+  background:var(--blue-tint); border-radius:0 var(--radius-sm) var(--radius-sm) 0;
+  padding:14px 16px; margin:20px 0; font-size:13.8px; color:var(--text);
+}
+.callout .icon-wrap{
+  flex-shrink:0; width:26px; height:26px; border-radius:50%; background:var(--blue); color:#fff;
+  display:flex; align-items:center; justify-content:center;
+}
+.callout .icon-wrap .icon{font-size:14px;}
+.callout-body{min-width:0;}
+.callout-title{font-weight:700; margin-bottom:3px;}
+.callout p, .callout .callout-title{margin-bottom:0;}
+.callout.tip{border-left-color:var(--green); background:rgba(16,124,16,0.07);}
+.callout.tip .icon-wrap{background:var(--green);}
+.callout.warning{border-left-color:var(--amber); background:rgba(200,127,10,0.08);}
+.callout.warning .icon-wrap{background:var(--amber);}
+[data-theme="dark"] .callout.tip{background:rgba(16,124,16,0.14);}
+[data-theme="dark"] .callout.warning{background:rgba(200,127,10,0.16);}
+
+/* ======================================================================
+   CARDS
+   ====================================================================== */
+.card-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(230px,1fr)); gap:16px; margin:22px 0;}
+.doc-card{
+  background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-md); padding:20px;
+  box-shadow:var(--shadow-sm); transition:box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+}
+.doc-card:hover{box-shadow:var(--shadow-md); transform:translateY(-3px); border-color:var(--border-strong);}
+.doc-card .card-icon{
+  width:38px; height:38px; border-radius:9px; display:flex; align-items:center; justify-content:center;
+  margin-bottom:12px; color:#fff;
+}
+.doc-card .card-icon .icon{font-size:19px;}
+.doc-card h4{margin:0 0 6px; font-size:15px;}
+.doc-card p{margin:0; font-size:13px; color:var(--text-secondary);}
+
+.accent-blue{ background:linear-gradient(135deg, var(--blue), #0A4E8C); }
+.accent-purple{ background:linear-gradient(135deg, var(--purple), #5B3E85); }
+.accent-teal{ background:linear-gradient(135deg, var(--teal), #024F51); }
+.accent-green{ background:linear-gradient(135deg, var(--green), #0B5C0B); }
+.accent-amber{ background:linear-gradient(135deg, var(--amber), #8C5C08); }
+.accent-red{ background:linear-gradient(135deg, var(--red), #8C2338); }
+.accent-cyan{ background:linear-gradient(135deg, var(--cyan), #007680); }
+
+/* ======================================================================
+   TABLES
+   ====================================================================== */
+.table-wrap{overflow-x:auto; margin:20px 0; border:1px solid var(--border); border-radius:var(--radius-md); box-shadow:var(--shadow-sm);}
+table.doc-table{width:100%; border-collapse:collapse; font-size:13.6px; min-width:560px;}
+table.doc-table th{
+  background:var(--bg-sunken); text-align:left; padding:11px 16px; font-weight:700;
+  border-bottom:2px solid var(--border); white-space:nowrap;
+}
+table.doc-table td{padding:10px 16px; border-bottom:1px solid var(--border); color:var(--text-secondary);}
+table.doc-table tr:last-child td{border-bottom:none;}
+table.doc-table td.yes{color:var(--green); font-weight:700;}
+table.doc-table td.no{color:var(--red); font-weight:700;}
+table.doc-table tbody tr{transition:background 0.12s;}
+table.doc-table tbody tr:hover{background:var(--bg-sunken);}
+
+/* ======================================================================
+   CODE
+   ====================================================================== */
+.code-block{margin:18px 0; border-radius:var(--radius-md); overflow:hidden; border:1px solid var(--border); box-shadow:var(--shadow-sm);}
+.code-block .code-header{
+  background:#151515; color:#aaa; font-size:12px; padding:8px 16px; display:flex; justify-content:space-between; align-items:center;
+  font-family:var(--font-mono);
+}
+.code-block .code-header .dots{display:flex; gap:6px;}
+.code-block .code-header .dots span{width:9px; height:9px; border-radius:50%; display:inline-block;}
+.code-block .code-header .dots span:nth-child(1){background:#ff5f57;}
+.code-block .code-header .dots span:nth-child(2){background:#febc2e;}
+.code-block .code-header .dots span:nth-child(3){background:#28c840;}
+.code-block .header-right{display:flex; align-items:center; gap:12px;}
+.code-block .filename{opacity:0.85;}
+.code-block .copy-btn{
+  background:none; border:1px solid #444; color:#ccc; font-size:11px; border-radius:5px; padding:3px 10px; cursor:pointer;
+  display:flex; align-items:center; gap:5px; transition:background 0.15s, border-color 0.15s;
+}
+.code-block .copy-btn:hover{background:#2a2a2a; border-color:#666;}
+.code-block .copy-btn .icon{font-size:12px;}
+.code-block pre{margin:0 !important; background:var(--code-bg) !important; padding:16px !important; overflow-x:auto;}
+.code-block code{font-family:var(--font-mono) !important; font-size:13px !important; line-height:1.6; color:var(--code-text); white-space:pre;}
+:not(pre) > code{
+  background:var(--bg-sunken); color:var(--red); padding:2px 6px; border-radius:4px; font-family:var(--font-mono); font-size:0.87em;
+}
+[data-theme="dark"] :not(pre) > code{color:#F0A0AC;}
+
+/* syntax token colors (custom lightweight highlighter) */
+.tok-kw{color:#C586C0;}
+.tok-type{color:#4EC9B0;}
+.tok-str{color:#CE9178;}
+.tok-com{color:#6A9955; font-style:italic;}
+.tok-num{color:#B5CEA8;}
+.tok-fn{color:#DCDCAA;}
+.tok-punc{color:#D4D4D4;}
+
+/* ======================================================================
+   DIAGRAMS
+   ====================================================================== */
+.diagram{
+  background:var(--bg-sunken); border:1px solid var(--border); border-radius:var(--radius-lg); padding:28px;
+  margin:22px 0; overflow-x:auto;
+}
+.diagram-row{display:flex; align-items:center; justify-content:center; gap:14px; flex-wrap:wrap;}
+.diagram-col{display:flex; flex-direction:column; align-items:center; gap:10px;}
+.dbox{
+  background:var(--surface); border:1.5px solid var(--blue); border-radius:var(--radius-sm); padding:12px 18px;
+  font-size:12.5px; font-weight:700; text-align:center; min-width:120px; box-shadow:var(--shadow-sm);
+  color:var(--blue-dark);
+}
+.dbox .icon{font-size:18px; margin-bottom:4px; color:var(--blue);}
+.dbox.alt{border-color:var(--purple); color:var(--purple);}
+.dbox.alt .icon{color:var(--purple);}
+.dbox.alt2{border-color:var(--cyan); color:var(--teal);}
+.dbox.alt2 .icon{color:var(--teal);}
+.dbox.green{border-color:var(--green); color:var(--green);}
+.dbox.green .icon{color:var(--green);}
+.dbox.orange{border-color:var(--amber); color:var(--amber);}
+.dbox.orange .icon{color:var(--amber);}
+.dbox small{display:block; font-weight:400; color:var(--text-muted); font-size:10.5px; margin-top:3px;}
+.darrow{color:var(--text-muted); display:flex; align-items:center;}
+.darrow .icon{font-size:20px;}
+.dlayer{
+  width:100%; text-align:left; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-sm);
+  padding:10px 14px; font-size:12.5px; font-weight:600; margin-bottom:4px; display:flex; align-items:center; gap:8px;
+}
+.dlayer .icon{color:var(--blue);}
+
+/* ======================================================================
+   ACCORDION
+   ====================================================================== */
+.accordion-custom{margin:20px 0; border:1px solid var(--border); border-radius:var(--radius-md); overflow:hidden; box-shadow:var(--shadow-sm);}
+.acc-item{border-bottom:1px solid var(--border);}
+.acc-item:last-child{border-bottom:none;}
+.acc-header{
+  width:100%; text-align:left; background:var(--surface); border:none; padding:15px 18px; font-weight:700; font-size:14px;
+  display:flex; justify-content:space-between; align-items:center; cursor:pointer; color:var(--text); gap:10px;
+  transition:background 0.15s;
+}
+.acc-header:hover{background:var(--bg-sunken);}
+.acc-header .step-num{
+  width:24px; height:24px; border-radius:6px; background:var(--blue-tint); color:var(--blue-dark);
+  display:inline-flex; align-items:center; justify-content:center; font-size:11.5px; font-family:var(--font-mono); margin-right:4px;
+}
+.acc-header .chev{transition:transform 0.2s; color:var(--blue); flex-shrink:0;}
+.acc-header.open .chev{transform:rotate(180deg);}
+.acc-header .title-text{flex:1; display:flex; align-items:center;}
+.acc-body{max-height:0; overflow:hidden; transition:max-height 0.28s ease; background:var(--bg-sunken);}
+.acc-body-inner{padding:6px 18px 20px;}
+
+/* ======================================================================
+   MISC
+   ====================================================================== */
+.divider-note{font-size:12px; color:var(--text-muted); margin:6px 0 18px;}
+.pill{display:inline-flex; align-items:center; padding:2px 10px; border-radius:20px; background:var(--bg-sunken); font-size:11.5px; font-weight:700; color:var(--text-secondary); margin-right:6px;}
+
+.back-to-top{
+  position:fixed; bottom:28px; right:28px; width:46px; height:46px; border-radius:50%;
+  background:var(--blue); color:#fff; border:none; cursor:pointer;
+  display:flex; align-items:center; justify-content:center; box-shadow:var(--shadow-lg);
+  opacity:0; pointer-events:none; transform:translateY(10px); transition:opacity 0.25s, transform 0.25s, background 0.15s; z-index:800;
+}
+.back-to-top .icon{font-size:19px;}
+.back-to-top.show{opacity:1; pointer-events:auto; transform:translateY(0);}
+.back-to-top:hover{background:var(--blue-dark);}
+
+.page-footer{border-top:1px solid var(--border); margin-top:48px; padding-top:22px; color:var(--text-muted); font-size:12.5px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;}
+
+.backdrop{display:none; position:fixed; inset:0; background:rgba(0,0,0,0.45); z-index:850; backdrop-filter:blur(1px);}
+.backdrop.show{display:block;}
+
+@media (max-width: 1200px){
+  .toc{display:none;}
+  .content-col{margin-right:0;}
+}
+@media (max-width: 900px){
+  .menu-toggle{display:inline-flex; align-items:center;}
+  .sidebar{ transform:translateX(-100%); transition:transform 0.22s ease; box-shadow:var(--shadow-lg); }
+  .sidebar.open{transform:translateX(0);}
+  .content-col{margin-left:0; padding:26px 20px 80px;}
+  .topbar-search{display:none;}
+  .page-hero h1{font-size:2.1rem;}
+}
+</style>
+</head>
+<body>
+
+<!-- Inline SVG icon sprite — no external fonts/CDNs required -->
+<svg style="display:none" aria-hidden="true">
+<defs>
+  <symbol id="i-brand" viewBox="0 0 24 24"><path d="M12 2 20 7 20 17 12 22 4 17 4 7Z"/><circle cx="12" cy="12" r="2"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 11.5h1v5h1"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 22h4M12 2a6 6 0 0 0-3 11.2c.6.4 1 1.1 1 1.8v.5h4v-.5c0-.7.4-1.4 1-1.8A6 6 0 0 0 12 2Z"/></symbol>
+  <symbol id="i-warn" viewBox="0 0 24 24"><path d="M12 3 22 20H2Z"/><path d="M12 9.5v4.5M12 17h.01"/></symbol>
+  <symbol id="i-chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M4 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
+  <symbol id="i-chip" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="1.5"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 0 1 3 3v14a2.5 2.5 0 0 0-2.5-2.5H4Z"/><path d="M20 4h-6a3 3 0 0 0-3 3v14a2.5 2.5 0 0 1 2.5-2.5H20Z"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6Z"/></symbol>
+  <symbol id="i-nodes" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8 7.3l7 8.8M16 7.3l-7 8.8M8.5 6h7"/></symbol>
+  <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 6a1 1 0 0 1 1-1h5l2 2h9a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1Z"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="M3 8l9-4 9 4-9 4-9-4Z"/><path d="M3 8v9l9 4 9-4V8"/><path d="M12 12v9"/></symbol>
+  <symbol id="i-archive" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="4" rx="1"/><path d="M5 8v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8"/><path d="M10 13h4"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3 3 8l9 5 9-5Z"/><path d="M3 13l9 5 9-5M3 8v5M21 8v5"/></symbol>
+  <symbol id="i-shield-check" viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 5-3 8-7 9-4-1-7-4-7-9V6Z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5.5" rx="8" ry="3"/><path d="M4 5.5v13c0 1.7 3.6 3 8 3s8-1.3 8-3v-13"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></symbol>
+  <symbol id="i-terminal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9l3 3-3 3M12 15h5"/></symbol>
+  <symbol id="i-bug" viewBox="0 0 24 24"><path d="M9 9V7a3 3 0 0 1 6 0v2"/><rect x="6" y="9" width="12" height="10" rx="4"/><path d="M3 12h3M18 12h3M5 6l2 2M19 6l-2 2M5 19l2-2M19 19l-2-2"/></symbol>
+  <symbol id="i-journal" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="1.5"/><path d="M8 3v18M12 8h5M12 12h5M12 16h5"/></symbol>
+  <symbol id="i-hourglass" viewBox="0 0 24 24"><path d="M6 3h12M6 21h12M7 3c0 5 5 6.5 5 9s-5 4-5 9M17 3c0 5-5 6.5-5 9s5 4 5 9"/></symbol>
+  <symbol id="i-check-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9"/></symbol>
+  <symbol id="i-person-check" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M3 21c0-4 3-6 6-6s5 1.4 5.8 3.6M15.5 13.5l1.8 1.8 3.2-3.6"/></symbol>
+  <symbol id="i-shield-lock" viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 5-3 8-7 9-4-1-7-4-7-9V6Z"/><rect x="9.5" y="11" width="5" height="4" rx="0.6"/><path d="M10.5 11V9.5a1.5 1.5 0 0 1 3 0V11"/></symbol>
+  <symbol id="i-login" viewBox="0 0 24 24"><path d="M11 3H5a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h6M14 8l5 4-5 4M9 12h10"/></symbol>
+  <symbol id="i-person-plus" viewBox="0 0 24 24"><circle cx="8" cy="8" r="3.5"/><path d="M2 21c0-4 3-6 6-6s6 2 6 6M18 8v6M15 11h6"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M17 6l3 3M14 9l2 2"/></symbol>
+  <symbol id="i-tag" viewBox="0 0 24 24"><path d="M12 2h6a2 2 0 0 1 2 2v6l-9 9-8-8Z"/><circle cx="16" cy="7" r="1.3"/></symbol>
+  <symbol id="i-people" viewBox="0 0 24 24"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="9" r="2.6"/><path d="M2 21c0-3.5 2.7-6 6-6s6 2.5 6 6M14 21c0-2.6 1.8-4.6 4-5.3 2 0.6 4 2.6 4 5.3"/></symbol>
+  <symbol id="i-cookie" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="9" cy="9" r="1"/><circle cx="14" cy="8" r="1"/><circle cx="16" cy="13" r="1"/><circle cx="10" cy="15" r="1"/></symbol>
+  <symbol id="i-plug" viewBox="0 0 24 24"><path d="M9 2v6M15 2v6M6 8h12v3a6 6 0 0 1-12 0Z"/><path d="M12 17v5"/></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24"><path d="M9 15l6-6"/><path d="M13 6l1.5-1.5a3.5 3.5 0 0 1 5 5L18 11"/><path d="M11 18l-1.5 1.5a3.5 3.5 0 0 1-5-5L6 13"/></symbol>
+  <symbol id="i-table" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="1.5"/><path d="M3 9h18M3 15h18M9 4v16"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 15-6.7L21 8M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M21 3v5h-5M3 21v-5h5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
+  <symbol id="i-github" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol>
+  <symbol id="i-broom" viewBox="0 0 24 24"><path d="M4 21l5-5"/><path d="M9.5 15.5l7-7c1.4-1.4 1.4-3.6 0-5s-3.6-1.4-5 0l-7 7c-1.4 1.4-1.4 3.6 0 5s3.6 1.4 5 0Z"/><path d="M12.5 8.5l3 3"/></symbol>
+  <symbol id="i-hammer" viewBox="0 0 24 24"><path d="M13.5 3.5l6 6-2.2 2.2-6-6Z"/><path d="M15.7 7.7L8 15.4"/><path d="M3.5 20.5l4.5-4.5 2 2-4.5 4.5c-.6.6-1.6.6-2.2 0s-.4-1.6.2-2Z"/></symbol>
+  <symbol id="i-rocket" viewBox="0 0 24 24"><path d="M12 2.5c3 2 5 6 5 9.7 0 1.1-.2 2.1-.5 3l-2 2-2-2-2 2-2-2c-.3-.9-.5-1.9-.5-3 0-3.7 2-7.7 5-9.7Z"/><circle cx="12" cy="9.5" r="1.5"/><path d="M8.7 16.8l-1.8 3.7 3.6-1.9M15.3 16.8l1.8 3.7-3.6-1.9"/></symbol>
+</defs>
+</svg>
+
+<!-- ============ TOP BAR ============ -->
+<header class="topbar">
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation"><svg class="icon"><use href="#i-menu"/></svg></button>
+  <div class="brand"><svg class="icon"><use href="#i-brand"/></svg> ASP.NET Core Developer Guide</div>
+  <div class="topbar-search">
+    <svg class="icon"><use href="#i-search"/></svg>
+    <input type="text" id="searchInput" placeholder="Search this guide...">
+  </div>
+  <div class="topbar-actions">
+    <button class="icon-btn" id="themeToggle" title="Toggle light/dark theme"><svg class="icon" id="themeIcon"><use href="#i-moon"/></svg></button>
+    <button class="icon-btn" title="View source"><svg class="icon"><use href="#i-code"/></svg></button>
+  </div>
+</header>
+<div class="progress-track"><div class="progress-bar" id="progressBar"></div></div>
+
+<div class="backdrop" id="backdrop"></div>
+
+<div class="app-shell">
+
+  <!-- ============ SIDEBAR ============ -->
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-title">Overview</div>
+      <a class="nav-link" href="#top"><span class="nav-num">•</span>Introduction</a>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-title">Foundations</div>
+      <a class="nav-link" href="#sec1"><span class="nav-num">01</span>What is .NET?</a>
+      <a class="nav-link" href="#sec2"><span class="nav-num">02</span>.NET Framework vs .NET Core</a>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-title">Web Framework</div>
+      <a class="nav-link" href="#sec3"><span class="nav-num">03</span>Razor Pages</a>
+      <a class="nav-link" href="#sec4"><span class="nav-num">04</span>ASP.NET Core Identity</a>
+      <a class="nav-link" href="#sec5"><span class="nav-num">05</span>Role-Based Authorization &amp; DI</a>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-title">Data Access</div>
+      <a class="nav-link" href="#sec6"><span class="nav-num">06</span>Entity Framework Core</a>
+      <a class="nav-link" href="#sec7"><span class="nav-num">07</span>ADO.NET</a>
+      <a class="nav-link" href="#sec8"><span class="nav-num">08</span>EF Core vs ADO.NET</a>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-title">Craftsmanship</div>
+      <a class="nav-link" href="#sec9"><span class="nav-num">09</span>Best Practices</a>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-title">Tooling &amp; Deployment</div>
+      <a class="nav-link" href="#sec10"><span class="nav-num">10</span>Essential CLI Commands</a>
+      <a class="nav-link" href="#sec11"><span class="nav-num">11</span>EF Core Migrations to SQL Server</a>
+    </div>
+  </nav>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <main class="content-col" id="top">
+
+    <div class="page-hero">
+      <div class="hero-kicker"><svg class="icon"><use href="#i-book"/></svg> Training Manual</div>
+      <h1>ASP.NET Core Developer Learning Guide</h1>
+      <p class="lead">A practical, from-scratch guide to modern .NET and ASP.NET Core — built for junior developers who want to understand not just <em>how</em> but <em>why</em>.</p>
+      <div class="hero-meta">
+        <span><svg class="icon"><use href="#i-clock"/></svg> ~90 min read</span>
+        <span><svg class="icon"><use href="#i-layers"/></svg> 11 sections</span>
+        <span><svg class="icon"><use href="#i-terminal"/></svg> C# / Razor Pages / EF Core / ADO.NET</span>
+      </div>
+    </div>
+
+    <!-- ================================================================ -->
+    <!-- SECTION 1 -->
+    <!-- ================================================================ -->
+    <section class="doc-section" id="sec1">
+      <div class="section-eyebrow"><span class="num-badge">01</span>Section</div>
+      <h2>What is .NET?</h2>
+      <p><strong>.NET</strong> is a free, open-source developer platform from Microsoft for building many kinds of applications — web, mobile, desktop, cloud, games, IoT, and cloud-native microservices. It includes a runtime that executes code, a set of libraries you write against, and languages that compile down to a common format.</p>
+
+      <h3>A short history</h3>
+      <p>.NET started in the early 2000s as the <strong>.NET Framework</strong>, a Windows-only platform. Over the next decade it grew powerful but heavy and tightly coupled to Windows. In 2016, Microsoft released <strong>.NET Core</strong>, a ground-up rewrite that was open-source, cross-platform, and modular. Starting with <strong>.NET 5</strong> in 2020, Microsoft dropped the "Core" branding entirely and unified everything into a single yearly-released product simply called <strong>.NET</strong> (.NET 5, 6, 7, 8, 9…), with even-numbered releases (6, 8, 10…) marked <strong>LTS (Long Term Support)</strong>.</p>
+
+      <div class="callout">
+        <div class="icon-wrap"><svg class="icon"><use href="#i-info"/></svg></div>
+        <div class="callout-body"><div class="callout-title">Note</div>
+        There is no ".NET Core 4" — Microsoft jumped from .NET Core 3.1 straight to .NET 5 specifically to avoid confusion with the old .NET Framework 4.x line.</div>
+      </div>
+
+      <h3>Core building blocks</h3>
+      <div class="card-grid">
+        <div class="doc-card"><div class="card-icon accent-blue"><svg class="icon"><use href="#i-chip"/></svg></div><h4>CLR</h4><p>The Common Language Runtime executes compiled code, manages memory (garbage collection), handles exceptions, and enforces type safety.</p></div>
+        <div class="doc-card"><div class="card-icon accent-purple"><svg class="icon"><use href="#i-book"/></svg></div><h4>BCL</h4><p>The Base Class Library — thousands of ready-made types for collections, I/O, networking, strings, and more, shared by every .NET app.</p></div>
+        <div class="doc-card"><div class="card-icon accent-amber"><svg class="icon"><use href="#i-bolt"/></svg></div><h4>JIT Compilation</h4><p>Your C# compiles to an intermediate language (IL). The Just-In-Time compiler turns IL into native machine code right before it runs.</p></div>
+        <div class="doc-card"><div class="card-icon accent-teal"><svg class="icon"><use href="#i-nodes"/></svg></div><h4>Runtime</h4><p>The environment that hosts and executes your app — handling threading, memory, and the JIT — separate from your application code.</p></div>
+      </div>
+
+      <h3>How code gets from C# to your CPU</h3>
+      <div class="diagram">
+        <div class="diagram-row">
+          <div class="dbox">C# / F# / VB.NET<small>Source code</small></div>
+          <span class="darrow"><svg class="icon"><use href="#i-arrow-right"/></svg></span>
+          <div class="dbox alt">Compiler (Roslyn)<small>Produces IL + metadata</small></div>
+          <span class="darrow"><svg class="icon"><use href="#i-arrow-right"/></svg></span>
+          <div class="dbox alt2">Assembly (.dll)<small>Intermediate Language</small></div>
+          <span class="darrow"><svg class="icon"><use href="#i-arrow-right"/></svg></span>
+          <div class="dbox green">CLR + JIT<small>Runtime execution</small></div>
+          <span class="darrow"><svg class="icon"><use href="#i-arrow-right"/></svg></span>
+          <div class="dbox orange">Native machine code<small>Runs on CPU</small></div>
+        </div>
+      </div>
+
+      <h3>Supported languages</h3>
+      <p>.NET is multi-language by design. <strong>C#</strong> is the primary and most widely used language; <strong>F#</strong> offers a functional-first alternative; <strong>VB.NET</strong> is still supported for legacy codebases. All three compile to the same IL and can interoperate freely within one solution.</p>
+
+      <h3>Cross-platform capability</h3>
+      <p>Modern .NET runs natively on <strong>Windows, Linux, and macOS</strong>, and on ARM and x64 chips alike. The same codebase can be containerized with Docker and deployed to any cloud provider, which is the biggest practical difference from the old Windows-only .NET Framework.</p>
+
+      <h3>Why it matters: advantages &amp; use cases</h3>
+      <ul>
+        <li><strong>Performance</strong> — consistently ranks among the fastest mainstream web frameworks in independent benchmarks.</li>
+        <li><strong>Unified platform</strong> — one SDK builds web APIs, web apps, desktop apps (WPF/MAUI), and cloud functions.</li>
+        <li><strong>Huge ecosystem</strong> — NuGet has hundreds of thousands of packages; strong tooling in Visual Studio, Rider, and VS Code.</li>
+        <li><strong>Common use cases</strong> — REST APIs and microservices, enterprise line-of-business apps, e-commerce backends, real-time apps with SignalR, and cloud-native services on Azure/AWS/GCP.</li>
+      </ul>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- SECTION 2 -->
+    <!-- ================================================================ -->
+    <section class="doc-section" id="sec2">
+      <div class="section-eyebrow"><span class="num-badge">02</span>Section</div>
+      <h2>.NET Framework vs .NET Core (Modern .NET)</h2>
+      <p>Understanding this distinction matters because you'll still encounter legacy .NET Framework projects in the wild, while all new development happens on modern .NET.</p>
+
+      <div class="table-wrap">
+        <table class="doc-table">
+          <thead><tr><th>Capability</th><th>.NET Framework</th><th>.NET Core / Modern .NET</th></tr></thead>
+          <tbody>
+            <tr><td>Windows support</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+            <tr><td>Linux support</td><td class="no">No</td><td class="yes">Yes</td></tr>
+            <tr><td>macOS support</td><td class="no">No</td><td class="yes">Yes</td></tr>
+            <tr><td>Performance</td><td>Good</td><td class="yes">Significantly faster (Kestrel, span-based APIs)</td></tr>
+            <tr><td>Deployment</td><td>IIS-centric, Windows only</td><td class="yes">Self-contained, containers, any host</td></tr>
+            <tr><td>Open source</td><td>Partially</td><td class="yes">Fully open source on GitHub</td></tr>
+            <tr><td>Cross platform</td><td class="no">No</td><td class="yes">Yes</td></tr>
+            <tr><td>Docker support</td><td>Limited</td><td class="yes">First-class</td></tr>
+            <tr><td>Microservices friendly</td><td>Limited</td><td class="yes">Designed for it</td></tr>
+            <tr><td>Cloud ready</td><td>Retrofitted</td><td class="yes">Native (Azure, AWS, GCP)</td></tr>
+            <tr><td>Future support</td><td class="no">Maintenance mode only</td><td class="yes">Active yearly releases</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Why .NET Core became "modern .NET"</h3>
+      <p>.NET Framework's biggest limitation was that it shipped as part of Windows itself, so every app on a machine shared one framework version — updates could break unrelated apps, and there was no path off Windows. .NET Core solved this by making the runtime an <strong>app-local dependency</strong>: each app ships (or references) the exact version it was built against. Combined with open-sourcing the entire stack and rebuilding performance-critical pieces from scratch, .NET Core proved so successful that Microsoft retired the "Framework" line and continued innovating only on Core, renaming it simply ".NET" from version 5 onward.</p>
+
+      <div class="callout tip">
+        <div class="icon-wrap"><svg class="icon"><use href="#i-bulb"/></svg></div>
+        <div class="callout-body"><div class="callout-title">Guidance</div>
+        Start every new project on the latest LTS release of modern .NET. Only reach for .NET Framework when maintaining an existing legacy system that depends on Windows-only APIs (like WCF or WebForms) that haven't been ported.</div>
+      </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- SECTION 3 -->
+    <!-- ================================================================ -->
+    <section class="doc-section" id="sec3">
+      <div class="section-eyebrow"><span class="num-badge">03</span>Section</div>
+      <h2>Razor Pages</h2>
+      <p><strong>Razor Pages</strong> is a page-focused way of building web UI in ASP.NET Core. Instead of the Controller → Action → View indirection of MVC, each page is a self-contained pair of files: a <code>.cshtml</code> markup file and a <code>.cshtml.cs</code> code-behind class called the <strong>PageModel</strong>.</p>
+
+      <h3>Why use Razor Pages?</h3>
+      <ul>
+        <li>Simpler mental model for page-oriented apps (forms, CRUD screens, dashboards).</li>
+        <li>Each page owns its own logic — easier to navigate than hunting through a shared controller.</li>
+        <li>Still built on the same routing, model binding, and dependency injection as MVC.</li>
+      </ul>
+
+      <h3>Razor Pages vs MVC</h3>
+      <div class="table-wrap">
+        <table class="doc-table">
+          <thead><tr><th></th><th>Razor Pages</th><th>MVC</th></tr></thead>
+          <tbody>
+            <tr><td>Organization</td><td>Page-centric (view + logic together)</td><td>Controller-centric (many actions per controller)</td></tr>
+            <tr><td>Best for</td><td>Forms, CRUD, page-driven apps</td><td>APIs, complex multi-action flows</td></tr>
+            <tr><td>Routing</td><td>Convention: folder path = URL</td><td>Convention: /Controller/Action</td></tr>
+            <tr><td>Testability</td><td>PageModel is unit-testable</td><td>Controller is unit-testable</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Project structure</h3>
+      <div class="diagram">
+        <div style="max-width:460px; margin:0 auto;">
+          <div class="dlayer"><svg class="icon"><use href="#i-folder"/></svg> MyApp/</div>
+          <div class="dlayer" style="margin-left:20px;"><svg class="icon"><use href="#i-folder"/></svg> Pages/ <span class="pill">routable pages</span></div>
+          <div class="dlayer" style="margin-left:40px;">Index.cshtml + Index.cshtml.cs</div>
+          <div class="dlayer" style="margin-left:40px;">Privacy.cshtml + Privacy.cshtml.cs</div>
+          <div class="dlayer" style="margin-left:40px;"><svg class="icon"><use href="#i-folder"/></svg> Shared/ <span class="pill">layouts &amp; partials</span></div>
+          <div class="dlayer" style="margin-left:60px;">_Layout.cshtml</div>
+          <div class="dlayer" style="margin-left:60px;">_ValidationScriptsPartial.cshtml</div>
+          <div class="dlayer" style="margin-left:40px;">_ViewImports.cshtml <span class="pill">shared usings/tag helpers</span></div>
+          <div class="dlayer" style="margin-left:40px;">_ViewStart.cshtml <span class="pill">sets default layout</span></div>
+        </div>
+      </div>
+      <p><strong>_ViewImports.cshtml</strong> centralizes <code>@using</code> statements and <code>@addTagHelper</code> directives so every page shares them. <strong>_ViewStart.cshtml</strong> runs before every page and typically sets <code>Layout = "_Layout";</code>. <strong>Partial Views</strong> are reusable markup fragments rendered inside a page with <code>&lt;partial name="_Card" /&gt;</code>.</p>
+
+      <h3>The PageModel and handler methods</h3>
+      <p>Every page has a PageModel class deriving from <code>PageModel</code>. Incoming HTTP requests are routed to <strong>handler methods</strong> named by convention: <code>OnGet</code> handles GET requests, <code>OnPost</code> handles POST, and their async twins <code>OnGetAsync</code> / <code>OnPostAsync</code> are preferred for any I/O-bound work.</p>
+
+      <div class="code-block">
+        <div class="code-header"><div class="dots"><span></span><span></span><span></span></div><div class="header-right"><span class="filename">Pages/Index.cshtml.cs</span><button class="copy-btn" onclick="copyCode(this)"><svg class="icon"><use href="#i-link"/></svg>Copy</button></div></div>
+        <pre><code class="language-csharp">public class IndexModel : PageModel
+{
+    private readonly ILogger&lt;IndexModel&gt; _logger;
+
+    public IndexModel(ILogger&lt;IndexModel&gt; logger)
+    {
+        _logger = logger;
+    }
+
+    public void OnGet()
+    {
+        // Runs on GET /Index
+    }
+
+    public async Task&lt;IActionResult&gt; OnPostAsync()
+    {
+        if (!ModelState.IsValid)
+        {
+            return Page();
+        }
+
+        // save data...
+        TempData["Message"] = "Saved successfully!";
+        return RedirectToPage("./Index");
+    }
+}</code></pre>
+      </div>
+
+      <h3>Named handlers</h3>
+      <p>A single page can expose <strong>multiple POST handlers</strong> by suffixing the method name, then targeting them from the form with <code>asp-page-handler</code>.</p>
+      <div class="code-block">
+        <div class="code-header"><div class="dots"><span></span><span></span><span></span></div><div class="header-right"><span class="filename">Named handler example</span><button class="copy-btn" onclick="copyCode(this)"><svg class="icon"><use href="#i-link"/></svg>Copy</button></div></div>
+        <pre><code class="language-csharp">public async Task&lt;IActionResult&gt; OnPostDeleteAsync(int id)
+{
+    await _repository.DeleteAsync(id);
+    return RedirectToPage();
+}</code></pre>
+      </div>
+      <div class="code-block">
+        <div class="code-header"><div class="dots"><span></span><span></span><span></span></div><div class="header-right"><span class="filename">Index.cshtml</span></div></div>
+        <pre><code class="language-html">&lt;form method="post" asp-page-handler="Delete" asp-route-id="@item.Id"&gt;</code></pre>
+      </div>
+
+      <h3>Binding, TempData, ViewData &amp; ModelState</h3>
+      <ul>
+        <li><strong>Model Binding</strong> — <code>[BindProperty]</code> maps posted form fields directly onto PageModel properties.</li>
+        <li><strong>TempData</strong> — survives exactly one redirect, backed by session or cookies; great for "Saved!" flash messages.</li>
+        <li><strong>ViewData</strong> — a dictionary that lasts only for the current request, used to pass small bits of data into the view.</li>
+        <li><strong>ModelState</strong> — tracks validation results from data annotations; check <code>ModelState.IsValid</code> before acting on posted data.</li>
+      </ul>
+
+      <h3>Routing &amp; URL mapping</h3>
+      <p>By default, a page's file path <em>is</em> its route: <code>Pages/Products/Details.cshtml</code> maps to <code>/Products/Details</code>. You can override this with <code>@page "{id:int}"</code> at the top of the file to capture route parameters that flow straight into handler method arguments via model binding.</p>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- SECTION 4 -->
+    <!-- ================================================================ -->
+    <section class="doc-section" id="sec4">
+      <div class="section-eyebrow"><span class="num-badge">04</span>Section</div>
+      <h2>ASP.NET Core Identity</h2>
+      <p><strong>ASP.NET Core Identity</strong> is the built-in membership system that manages users, passwords, roles, and claims, and integrates with cookie-based or token-based sign-in.</p>
+
+      <h3>Authentication vs Authorization</h3>
+      <div class="diagram">
+        <div class="diagram-row">
+          <div class="diagram-col">
+            <div class="dbox green"><svg class="icon"><use href="#i-person-check"/></svg><br>Authentication<small>"Who are you?"</small></div>
+            <p style="font-size:12px; max-width:200px; text-align:center; margin:8px 0 0;">Verifies identity — usually a username/password check that produces a signed-in principal.</p>
+          </div>
+          <span class="darrow"><svg class="icon"><use href="#i-arrow-right"/></svg></span>
+          <div class="diagram-col">
+            <div class="dbox alt"><svg class="icon"><use href="#i-shield-lock"/></svg><br>Authorization<small>"What can you do?"</small></div>
+            <p style="font-size:12px; max-width:200px; text-align:center; margin:8px 0 0;">Decides whether the now-known identity is allowed to access a resource or action.</p>
+          </div>
+        </div>
+      </div>
+      <p>In short: <strong>authentication happens first</strong> and establishes identity; <strong>authorization happens second</strong> and checks permissions against that identity. A request can be authenticated but still unauthorized (a logged-in user trying to open an admin page).</p>
+
+      <h3>Core concepts</h3>
+      <div class="card-grid">
+        <div class="doc-card"><div class="card-icon accent-green"><svg class="icon"><use href="#i-login"/></svg></div><h4>Login / Logout</h4><p><code>SignInManager</code> issues or clears the authentication cookie that represents a session.</p></div>
+        <div class="doc-card"><div class="card-icon accent-blue"><svg class="icon"><use href="#i-person-plus"/></svg></div><h4>Register</h4><p><code>UserManager.CreateAsync()</code> creates a new user record with a securely hashed password.</p></div>
+        <div class="doc-card"><div class="card-icon accent-amber"><svg class="icon"><use href="#i-key"/></svg></div><h4>Password Hashing</h4><p>Identity never stores plain-text passwords — it uses PBKDF2 hashing with a per-user salt.</p></div>
+        <div class="doc-card"><div class="card-icon accent-purple"><svg class="icon"><use href="#i-tag"/></svg></div><h4>Claims</h4><p>Key/value pairs describing the user (email, role, department) attached to their identity.</p></div>
+        <div class="doc-card"><div class="card-icon accent-teal"><svg class="icon"><use href="#i-people"/></svg></div><h4>Roles</h4><p>Named groups (Admin, Editor, Viewer) that claims and policies can check against.</p></div>
+        <div class="doc-card"><div class="card-icon accent-red"><svg class="icon"><use href="#i-cookie"/></svg></div><h4>Cookies</h4><p>The default carrier for the signed-in session, encrypted and marked HttpOnly for safety.</p></div>
+      </div>
+
+      <div class="callout warning">
+        <div class="icon-wrap"><svg class="icon"><use href="#i-warn"/></svg></div>
+        <div class="callout-body"><div class="callout-title">Security note</div>
+        Never write your own password hashing. Identity's hasher is battle-tested, salted, and versioned so it can be upgraded without breaking existing accounts.</div>
+      </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- SECTION 5 -->
+    <!-- ================================================================ -->
+    <section class="doc-section" id="sec5">
+      <div class="section-eyebrow"><span class="num-badge">05</span>Section</div>
+      <h2>Role-Based Authorization &amp; Dependency Injection</h2>
+
+      <h3>Real-world scenario</h3>
+      <p>Consider an internal portal where <strong>every user has exactly one role</strong> — Admin, Manager, or Employee — stored on their account. Each page declares which roles may open it, and on every request the framework checks the current user's role before rendering the page. An Employee hitting <code>/Payroll/ApproveRaises</code> is redirected away before any payroll data is ever touched.</p>
+
+      <div class="diagram">
+        <div class="diagram-row">
+          <div class="dbox">Request arrives<small>GET /Admin/Users</small></div>
+          <span class="darrow"><svg class="icon"><use href="#i-arrow-right"/></svg></span>
+          <div class="dbox alt2">Authentication middleware<small>Reads the cookie, builds ClaimsPrincipal</small></div>
+          <span class="darrow"><svg class="icon"><use href="#i-arrow-right"/></svg></span>
+          <div class="dbox alt">Authorization middleware<small>Checks role/policy requirement</small></div>
+          <span class="darrow"><svg class="icon"><use href="#i-arrow-right"/></svg></span>
+          <div class="dbox green">Allowed<small>Page executes</small></div>
+        </div>
+      </div>
+
+      <div class="code-block">
+        <div class="code-header"><div class="dots"><span></span><span></span><span></span></div><div class="header-right"><span class="filename">Page-level role check</span><button class="copy-btn" onclick="copyCode(this)"><svg class="icon"><use href="#i-link"/></svg>Copy</button></div></div>
+        <pre><code class="language-csharp">[Authorize(Roles = "Admin")]
+public class UsersModel : PageModel
+{
+    public IActionResult OnGet()
+    {
+        if (User.Identity?.Role == "Admin")
+        {
+            // proceed
+        }
+        return Page();
+    }
+}</code></pre>
+      </div>
+
+      <h3>Dependency Injection (DI)</h3>
+      <p>Rather than a class creating its own dependencies with <code>new</code>, DI has the framework hand ("inject") them in — typically through the <strong>constructor</strong>. This is what makes services like an authorization checker swappable, mockable, and centrally configured.</p>
+
+      <div class="code-block">
+        <div class="code-header"><div class="dots"><span></span><span></span><span></span></div><div class="header-right"><span class="filename">Registering a service</span><button class="copy-btn" onclick="copyCode(this)"><svg class="icon"><use href="#i-link"/></svg>Copy</button></div></div>
+        <pre><code class="language-csharp">builder.Services.AddScoped&lt;IAuthorizationService, AuthorizationService&gt;();
+builder.Services.AddScoped&lt;IUserService, UserService&gt;();</code></pre>
+      </div>
+
+      <div class="code-block">
+        <div class="code-header"><div class="dots"><span></span><span></span><span></span></div><div class="header-right"><span class="filename">Constructor injection</span><button class="copy-btn" onclick="copyCode(this)"><svg class="icon"><use href="#i-link"/></svg>Copy</button></div></div>
+        <pre><code class="language-csharp">public class DashboardModel : PageModel
+{
+    private readonly IUserService _userService;
+
+    public DashboardModel(IUserService userService)
+    {
+        _userService = userService;
+    }
+
+    public async Task OnGetAsync()
+    {
+        var user = await _userService.GetCurrentUserAsync();
+    }
+}</code></pre>
+      </div>
+
+      <h3>Service lifetimes</h3>
+      <div class="diagram">
+        <div class="diagram-row">
+          <div class="diagram-col"><div class="dbox green">Singleton<small>One instance, app lifetime</small></div></div>
+          <div class="diagram-col"><div class="dbox alt2">Scoped<small>One instance per HTTP request</small></div></div>
+          <div class="diagram-col"><div class="dbox orange">Transient<small>New instance every time it's requested</small></div></div>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table class="doc-table">
+          <thead><tr><th>Lifetime</th><th>Lifespan</th><th>Typical use</th></tr></thead>
+          <tbody>
+            <tr><td>Singleton</td><td>Whole application</td><td>Caching services, configuration objects</td></tr>
+            <tr><td>Scoped</td><td>One request</td><td><code>DbContext</code>, per-request user services</td></tr>
+            <tr><td>Transient</td><td>Every resolution</td><td>Lightweight, stateless helper services</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout tip">
+        <div class="icon-wrap"><svg class="icon"><use href="#i-bulb"/></svg></div>
+        <div class="callout-body"><div class="callout-title">Why DI beats manual construction</div>
+        Manually calling <code>new AuthorizationService()</code> hard-wires your class to one concrete implementation, makes unit testing painful (no way to substitute a fake), and scatters configuration logic everywhere. DI centralizes wiring in one place, lets you swap implementations (e.g. a mock in tests) without touching consuming code, and manages object lifetime correctly so scoped resources like a database connection aren't leaked or shared across requests.</div>
+      </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- SECTION 6 -->
+    <!-- ================================================================ -->
+    <section class="doc-section" id="sec6">
+      <div class="section-eyebrow"><span class="num-badge">06</span>Section</div>
+      <h2>Entity Framework Core</h2>
+      <p><strong>Entity Framework Core (EF Core)</strong> is Microsoft's official <strong>ORM</strong> (Object-Relational Mapper) — it lets you query and update a database using C# objects and LINQ instead of writing raw SQL by hand.</p>
+
+      <h3>Key building blocks</h3>
+      <div class="card-grid">
+        <div class="doc-card"><div class="card-icon accent-blue"><svg class="icon"><use href="#i-nodes"/></svg></div><h4>DbContext</h4><p>Represents a session with the database — tracks changes and coordinates saving them.</p></div>
+        <div class="doc-card"><div class="card-icon accent-teal"><svg class="icon"><use href="#i-table"/></svg></div><h4>DbSet&lt;T&gt;</h4><p>A queryable, in-memory-like collection mapped to one database table.</p></div>
+        <div class="doc-card"><div class="card-icon accent-purple"><svg class="icon"><use href="#i-refresh"/></svg></div><h4>Migrations</h4><p>Version-controlled, incremental scripts that evolve your schema alongside your model classes.</p></div>
+        <div class="doc-card"><div class="card-icon accent-amber"><svg class="icon"><use href="#i-link"/></svg></div><h4>Navigation Properties</h4><p>Object references (e.g. <code>Order.Customer</code>) that represent foreign-key relationships.</p></div>
+      </div>
+
+      <h3>EF Core execution flow</h3>
+      <div class="diagram">
+        <div class="diagram-row">
+          <div class="dbox">LINQ query<small>context.Users.Where(...)</small></div>
+          <span class="darrow"><svg class="icon"><use href="#i-arrow-right"/></svg></span>
+          <div class="dbox alt">Query translation<small>Expression tree → SQL</small></div>
+          <span class="darrow"><svg class="icon"><use href="#i-arrow-right"/></svg></span>
+          <div class="dbox alt2">Database<small>Executes generated SQL</small></div>
+          <span class="darrow"><svg class="icon"><use href="#i-arrow-right"/></svg></span>
+          <div class="dbox green">Materialization<small>Rows mapped back to C# objects</small></div>
+        </div>
+      </div>
+
+      <h3>Tracking vs AsNoTracking</h3>
+      <p>By default, EF Core <strong>tracks</strong> every entity it loads so it can detect changes on <code>SaveChanges()</code>. For read-only queries, call <code>.AsNoTracking()</code> to skip that bookkeeping and get a meaningful performance boost.</p>
+
+      <h3>Method syntax vs Query syntax</h3>
+      <div class="table-wrap">
+        <table class="doc-table">
+          <thead><tr><th></th><th>Method syntax</th><th>Query syntax</th></tr></thead>
+          <tbody>
+            <tr><td>Style</td><td>Fluent, chained LINQ methods</td><td>SQL-like keywords (<code>from</code>/<code>where</code>/<code>select</code>)</td></tr>
+            <tr><td>Best for</td><td>Most everyday queries; more operators available</td><td>Complex joins that read more naturally in SQL-like form</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="code-block">
+        <div class="code-header"><div class="dots"><span></span><span></span><span></span></div><div class="header-right"><span class="filename">Method syntax</span><button class="copy-btn" onclick="copyCode(this)"><svg class="icon"><use href="#i-link"/></svg>Copy</button></div></div>
+        <pre><code class="language-csharp">var activeUsers = context.Users
+    .Where(x =&gt; x.Active)
+    .OrderBy(x =&gt; x.Name)
+    .ToList();</code></pre>
+      </div>
+      <div class="code-block">
+        <div class="code-header"><div class="dots"><span></span><span></span><span></span></div><div class="header-right"><span class="filename">Query syntax</span><button class="copy-btn" onclick="copyCode(this)"><svg class="icon"><use href="#i-link"/></svg>Copy</button></div></div>
+        <pre><code class="language-csharp">var activeUsers =
+    from u in context.Users
+    where u.Active
+    orderby u.Name
+    select u;</code></pre>
+      </div>
+      <p>Both compile to the same underlying calls. Reach for <strong>method syntax</strong> by default — it covers more of the LINQ surface area (e.g. <code>Skip</code>/<code>Take</code>/<code>Any</code>) without mixing syntaxes; drop into <strong>query syntax</strong> only when a multi-table join genuinely reads more clearly with <code>join ... in ... on ... equals ...</code>.</p>
+
+      <h3>Common LINQ operators</h3>
+      <div class="table-wrap">
+        <table class="doc-table">
+          <thead><tr><th>Operator</th><th>Purpose</th><th>SQL equivalent</th></tr></thead>
+          <tbody>
+            <tr><td><code>FirstOrDefault</code></td><td>First match, or null/default</td><td><code>SELECT TOP 1 ...</code></td></tr>
+            <tr><td><code>SingleOrDefault</code></td><td>Exactly one match expected, or null</td><td>Same, with a uniqueness assumption</td></tr>
+            <tr><td><code>Any</code></td><td>Does at least one row match?</td><td><code>EXISTS (...)</code></td></tr>
+            <tr><td><code>Count</code></td><td>Number of matching rows</td><td><code>COUNT(*)</code></td></tr>
+            <tr><td><code>Select</code></td><td>Project into a shape (DTO)</td><td><code>SELECT col1, col2</code></td></tr>
+            <tr><td><code>Join</code> / <code>GroupJoin</code></td><td>Inner join / grouped (left-like) join</td><td><code>INNER JOIN</code> / <code>LEFT JOIN ... GROUP</code></td></tr>
+            <tr><td><code>GroupBy</code></td><td>Aggregate rows into groups</td><td><code>GROUP BY</code></td></tr>
+            <tr><td><code>Distinct</code></td><td>Remove duplicate rows</td><td><code>DISTINCT</code></td></tr>
+            <tr><td><code>Skip</code> / <code>Take</code></td><td>Pagination — skip N, take M</td><td><code>OFFSET ... FETCH NEXT ...</code></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="code-block">
+        <div class="code-header"><div class="dots"><span></span><span></span><span></span></div><div class="header-right"><span class="filename">Pagination example</span><button class="copy-btn" onclick="copyCode(this)"><svg class="icon"><use href="#i-link"/></svg>Copy</button></div></div>
+        <pre><code class="language-csharp">var page2 = context.Products
+    .OrderBy(p =&gt; p.Id)
+    .Skip(20)
+    .Take(20)
+    .ToList();</code></pre>
+      </div>
+
+      <h3>Include / ThenInclude</h3>
+      <p>Navigation properties are <strong>not</strong> loaded automatically. Use <code>.Include()</code> to eagerly load a related collection or reference, and <code>.ThenInclude()</code> to reach one level deeper.</p>
+      <div class="code-block">
+        <div class="code-header"><div class="dots"><span></span><span></span><span></span></div><div class="header-right"><span class="filename">Eager loading</span><button class="copy-btn" onclick="copyCode(this)"><svg class="icon"><use href="#i-link"/></svg>Copy</button></div></div>
+        <pre><code class="language-csharp">var orders = context.Orders
+    .Include(o =&gt; o.Customer)
+    .Include(o =&gt; o.Items)
+        .ThenInclude(i =&gt; i.Product)
+    .ToList();</code></pre>
+      </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- SECTION 7 -->
+    <!-- ================================================================ -->
+    <section class="doc-section" id="sec7">
+      <div class="section-eyebrow"><span class="num-badge">07</span>Section</div>
+      <h2>ADO.NET</h2>
+      <p><strong>ADO.NET</strong> is the low-level data-access API that underlies EF Core itself. It gives you direct control over connections, commands, and result sets — useful when you need maximum performance, complex stored procedures, or fine-grained control that an ORM abstracts away.</p>
+
+      <h3>Building blocks</h3>
+      <div class="card-grid">
+        <div class="doc-card"><div class="card-icon accent-blue"><svg class="icon"><use href="#i-plug"/></svg></div><h4>SqlConnection</h4><p>Represents an open connection to the database; always wrapped in <code>using</code> so it's closed/returned to the pool.</p></div>
+        <div class="doc-card"><div class="card-icon accent-purple"><svg class="icon"><use href="#i-terminal"/></svg></div><h4>SqlCommand</h4><p>Represents a SQL statement or stored-procedure call to execute against a connection.</p></div>
+        <div class="doc-card"><div class="card-icon accent-teal"><svg class="icon"><use href="#i-table"/></svg></div><h4>SqlDataReader</h4><p>A fast, forward-only stream for reading rows one at a time.</p></div>
+        <div class="doc-card"><div class="card-icon accent-amber"><svg class="icon"><use href="#i-db"/></svg></div><h4>DataSet / DataTable</h4><p>In-memory, disconnected representations of one or more result sets.</p></div>
+      </div>
+      <p>A <strong>SqlParameter</strong> binds a .NET value safely into a query or stored procedure call, preventing SQL injection — never build SQL by concatenating strings.</p>
+
+      <div class="callout warning">
+        <div class="icon-wrap"><svg class="icon"><use href="#i-warn"/></svg></div>
+        <div class="callout-body"><div class="callout-title">Security</div>
+        Always use parameterized <code>SqlParameter</code> objects for any value coming from user input. String-concatenated SQL is the single most common cause of SQL injection vulnerabilities.</div>
+      </div>
+
+      <h3>Execution flow</h3>
+      <div class="diagram">
+        <div class="diagram-row">
+          <div class="dbox">Open SqlConnection</div>
+          <span class="darrow"><svg class="icon"><use href="#i-arrow-right"/></svg></span>
+          <div class="dbox alt">Build SqlCommand<small>+ SqlParameters</small></div>
+          <span class="darrow"><svg class="icon"><use href="#i-arrow-right"/></svg></span>
+          <div class="dbox alt2">Execute<small>Reader / NonQuery / Scalar</small></div>
+          <span class="darrow"><svg class="icon"><use href="#i-arrow-right"/></svg></span>
+          <div class="dbox green">Map results<small>To objects, DataTable, or DataSet</small></div>
+        </div>
+      </div>
+
+      <h3>Stored procedure execution patterns</h3>
+      <p>Click each pattern below to expand a working example.</p>
+
+      <div class="accordion-custom">
+        <div class="acc-item">
+          <button class="acc-header" onclick="toggleAcc(this)"><span class="title-text"><span class="step-num">1</span>Returning a list</span><svg class="icon chev"><use href="#i-chevron"/></svg></button>
+          <div class="acc-body"><div class="acc-body-inner">
+            <p>Uses <code>ExecuteReader()</code> to stream rows and map each one into an object, building up a <code>List&lt;T&gt;</code>.</p>
+            <div class="code-block"><div class="code-header"><div class="dots"><span></span><span></span><span></span></div><div class="header-right"><span class="filename">GetActiveUsers.cs</span><button class="copy-btn" onclick="copyCode(this)"><svg class="icon"><use href="#i-link"/></svg>Copy</button></div></div><pre><code class="language-csharp">public List&lt;User&gt; GetActiveUsers()
+{
+    var users = new List&lt;User&gt;();
+    using var conn = new SqlConnection(_connString);
+    using var cmd = new SqlCommand("sp_GetActiveUsers", conn)
+    {
+        CommandType = CommandType.StoredProcedure
+    };
+    conn.Open();
+    using var reader = cmd.ExecuteReader();
+    while (reader.Read())
+    {
+        users.Add(new User
+        {
+            Id = reader.GetInt32(0),
+            Name = reader.GetString(1)
+        });
+    }
+    return users;
+}</code></pre></div>
+          </div></div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-header" onclick="toggleAcc(this)"><span class="title-text"><span class="step-num">2</span>Returning a single object</span><svg class="icon chev"><use href="#i-chevron"/></svg></button>
+          <div class="acc-body"><div class="acc-body-inner">
+            <p>Same <code>ExecuteReader()</code> pattern, but only reads the first row.</p>
+            <div class="code-block"><div class="code-header"><div class="dots"><span></span><span></span><span></span></div><div class="header-right"><span class="filename">GetUserById.cs</span><button class="copy-btn" onclick="copyCode(this)"><svg class="icon"><use href="#i-link"/></svg>Copy</button></div></div><pre><code class="language-csharp">public User? GetUserById(int id)
+{
+    using var conn = new SqlConnection(_connString);
+    using var cmd = new SqlCommand("sp_GetUserById", conn)
+    {
+        CommandType = CommandType.StoredProcedure
+    };
+    cmd.Parameters.AddWithValue("@Id", id);
+    conn.Open();
+    using var reader = cmd.ExecuteReader();
+    if (reader.Read())
+    {
+        return new User { Id = reader.GetInt32(0), Name = reader.GetString(1) };
+    }
+    return null;
+}</code></pre></div>
+          </div></div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-header" onclick="toggleAcc(this)"><span class="title-text"><span class="step-num">3</span>Parameters, no returned data (ExecuteNonQuery)</span><svg class="icon chev"><use href="#i-chevron"/></svg></button>
+          <div class="acc-body"><div class="acc-body-inner">
+            <p><code>ExecuteNonQuery()</code> runs an INSERT/UPDATE/DELETE-style procedure and returns the affected row count.</p>
+            <div class="code-block"><div class="code-header"><div class="dots"><span></span><span></span><span></span></div><div class="header-right"><span class="filename">DeactivateUser.cs</span><button class="copy-btn" onclick="copyCode(this)"><svg class="icon"><use href="#i-link"/></svg>Copy</button></div></div><pre><code class="language-csharp">public int DeactivateUser(int id)
+{
+    using var conn = new SqlConnection(_connString);
+    using var cmd = new SqlCommand("sp_DeactivateUser", conn)
+    {
+        CommandType = CommandType.StoredProcedure
+    };
+    cmd.Parameters.AddWithValue("@Id", id);
+    conn.Open();
+    return cmd.ExecuteNonQuery();
+}</code></pre></div>
+          </div></div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-header" onclick="toggleAcc(this)"><span class="title-text"><span class="step-num">4</span>No parameters, no returned data</span><svg class="icon chev"><use href="#i-chevron"/></svg></button>
+          <div class="acc-body"><div class="acc-body-inner">
+            <div class="code-block"><div class="code-header"><div class="dots"><span></span><span></span><span></span></div><div class="header-right"><span class="filename">PurgeExpiredSessions.cs</span><button class="copy-btn" onclick="copyCode(this)"><svg class="icon"><use href="#i-link"/></svg>Copy</button></div></div><pre><code class="language-csharp">public void PurgeExpiredSessions()
+{
+    using var conn = new SqlConnection(_connString);
+    using var cmd = new SqlCommand("sp_PurgeExpiredSessions", conn)
+    {
+        CommandType = CommandType.StoredProcedure
+    };
+    conn.Open();
+    cmd.ExecuteNonQuery();
+}</code></pre></div>
+          </div></div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-header" onclick="toggleAcc(this)"><span class="title-text"><span class="step-num">5</span>Returning a scalar value (ExecuteScalar)</span><svg class="icon chev"><use href="#i-chevron"/></svg></button>
+          <div class="acc-body"><div class="acc-body-inner">
+            <p><code>ExecuteScalar()</code> returns just the first column of the first row — ideal for counts, sums, or single IDs.</p>
+            <div class="code-block"><div class="code-header"><div class="dots"><span></span><span></span><span></span></div><div class="header-right"><span class="filename">GetUserCount.cs</span><button class="copy-btn" onclick="copyCode(this)"><svg class="icon"><use href="#i-link"/></svg>Copy</button></div></div><pre><code class="language-csharp">public int GetUserCount()
+{
+    using var conn = new SqlConnection(_connString);
+    using var cmd = new SqlCommand("sp_GetUserCount", conn)
+    {
+        CommandType = CommandType.StoredProcedure
+    };
+    conn.Open();
+    return (int)cmd.ExecuteScalar();
+}</code></pre></div>
+          </div></div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-header" onclick="toggleAcc(this)"><span class="title-text"><span class="step-num">6</span>Returning a DataTable</span><svg class="icon chev"><use href="#i-chevron"/></svg></button>
+          <div class="acc-body"><div class="acc-body-inner">
+            <p>A <code>SqlDataAdapter</code> fills a disconnected <code>DataTable</code> in one call — handy when you want an in-memory table without manual row-by-row mapping.</p>
+            <div class="code-block"><div class="code-header"><div class="dots"><span></span><span></span><span></span></div><div class="header-right"><span class="filename">GetOrdersTable.cs</span><button class="copy-btn" onclick="copyCode(this)"><svg class="icon"><use href="#i-link"/></svg>Copy</button></div></div><pre><code class="language-csharp">public DataTable GetOrdersTable()
+{
+    var table = new DataTable();
+    using var conn = new SqlConnection(_connString);
+    using var cmd = new SqlCommand("sp_GetOrders", conn)
+    {
+        CommandType = CommandType.StoredProcedure
+    };
+    using var adapter = new SqlDataAdapter(cmd);
+    adapter.Fill(table);
+    return table;
+}</code></pre></div>
+          </div></div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-header" onclick="toggleAcc(this)"><span class="title-text"><span class="step-num">7</span>Returning a DataSet</span><svg class="icon chev"><use href="#i-chevron"/></svg></button>
+          <div class="acc-body"><div class="acc-body-inner">
+            <p>A stored procedure that returns <em>multiple</em> result sets (e.g. an order plus its line items) can fill an entire <code>DataSet</code>, one <code>DataTable</code> per result set.</p>
+            <div class="code-block"><div class="code-header"><div class="dots"><span></span><span></span><span></span></div><div class="header-right"><span class="filename">GetOrderWithItems.cs</span><button class="copy-btn" onclick="copyCode(this)"><svg class="icon"><use href="#i-link"/></svg>Copy</button></div></div><pre><code class="language-csharp">public DataSet GetOrderWithItems(int orderId)
+{
+    var dataSet = new DataSet();
+    using var conn = new SqlConnection(_connString);
+    using var cmd = new SqlCommand("sp_GetOrderWithItems", conn)
+    {
+        CommandType = CommandType.StoredProcedure
+    };
+    cmd.Parameters.AddWithValue("@OrderId", orderId);
+    using var adapter = new SqlDataAdapter(cmd);
+    adapter.Fill(dataSet); // dataSet.Tables[0] = order, Tables[1] = items
+    return dataSet;
+}</code></pre></div>
+          </div></div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-header" onclick="toggleAcc(this)"><span class="title-text"><span class="step-num">8</span>Output parameters</span><svg class="icon chev"><use href="#i-chevron"/></svg></button>
+          <div class="acc-body"><div class="acc-body-inner">
+            <p>Declare a parameter's direction as <code>Output</code> to read a value the stored procedure sets, after execution.</p>
+            <div class="code-block"><div class="code-header"><div class="dots"><span></span><span></span><span></span></div><div class="header-right"><span class="filename">CreateOrder.cs</span><button class="copy-btn" onclick="copyCode(this)"><svg class="icon"><use href="#i-link"/></svg>Copy</button></div></div><pre><code class="language-csharp">using var cmd = new SqlCommand("sp_CreateOrder", conn)
+{
+    CommandType = CommandType.StoredProcedure
+};
+cmd.Parameters.AddWithValue("@CustomerId", customerId);
+
+var newIdParam = new SqlParameter("@NewOrderId", SqlDbType.Int)
+{
+    Direction = ParameterDirection.Output
+};
+cmd.Parameters.Add(newIdParam);
+
+conn.Open();
+cmd.ExecuteNonQuery();
+
+int newOrderId = (int)newIdParam.Value;</code></pre></div>
+          </div></div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-header" onclick="toggleAcc(this)"><span class="title-text"><span class="step-num">9</span>Return value</span><svg class="icon chev"><use href="#i-chevron"/></svg></button>
+          <div class="acc-body"><div class="acc-body-inner">
+            <p>A stored procedure's <code>RETURN</code> statement (typically a status code) is captured with a parameter direction of <code>ReturnValue</code>.</p>
+            <div class="code-block"><div class="code-header"><div class="dots"><span></span><span></span><span></span></div><div class="header-right"><span class="filename">ValidateOrder.cs</span><button class="copy-btn" onclick="copyCode(this)"><svg class="icon"><use href="#i-link"/></svg>Copy</button></div></div><pre><code class="language-csharp">var returnParam = new SqlParameter
+{
+    Direction = ParameterDirection.ReturnValue
+};
+cmd.Parameters.Add(returnParam);
+
+conn.Open();
+cmd.ExecuteNonQuery();
+
+int statusCode = (int)returnParam.Value;</code></pre></div>
+          </div></div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-header" onclick="toggleAcc(this)"><span class="title-text"><span class="step-num">10</span>Transactions</span><svg class="icon chev"><use href="#i-chevron"/></svg></button>
+          <div class="acc-body"><div class="acc-body-inner">
+            <p>A <code>SqlTransaction</code> groups multiple commands so they all succeed together (<code>Commit</code>) or all roll back (<code>Rollback</code>) if any step fails.</p>
+            <div class="code-block"><div class="code-header"><div class="dots"><span></span><span></span><span></span></div><div class="header-right"><span class="filename">TransferFunds.cs</span><button class="copy-btn" onclick="copyCode(this)"><svg class="icon"><use href="#i-link"/></svg>Copy</button></div></div><pre><code class="language-csharp">using var conn = new SqlConnection(_connString);
+conn.Open();
+using var transaction = conn.BeginTransaction();
+
+try
+{
+    using var debit = new SqlCommand("sp_Debit", conn, transaction);
+    debit.Parameters.AddWithValue("@AccountId", fromId);
+    debit.Parameters.AddWithValue("@Amount", amount);
+    debit.ExecuteNonQuery();
+
+    using var credit = new SqlCommand("sp_Credit", conn, transaction);
+    credit.Parameters.AddWithValue("@AccountId", toId);
+    credit.Parameters.AddWithValue("@Amount", amount);
+    credit.ExecuteNonQuery();
+
+    transaction.Commit();
+}
+catch
+{
+    transaction.Rollback();
+    throw;
+}</code></pre></div>
+          </div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- SECTION 8 -->
+    <!-- ================================================================ -->
+    <section class="doc-section" id="sec8">
+      <div class="section-eyebrow"><span class="num-badge">08</span>Section</div>
+      <h2>When to Use Entity Framework vs ADO.NET</h2>
+      <div class="table-wrap">
+        <table class="doc-table">
+          <thead><tr><th>Criterion</th><th>Entity Framework Core</th><th>ADO.NET</th></tr></thead>
+          <tbody>
+            <tr><td>Raw performance</td><td>Good, with some ORM overhead</td><td class="yes">Fastest — no abstraction layer</td></tr>
+            <tr><td>Flexibility</td><td>Constrained to LINQ-translatable queries</td><td class="yes">Full control over exact SQL</td></tr>
+            <tr><td>Stored procedures</td><td>Supported but secondary</td><td class="yes">First-class, purpose-built</td></tr>
+            <tr><td>CRUD development speed</td><td class="yes">Very fast — write C#, not SQL</td><td>Slower — hand-write everything</td></tr>
+            <tr><td>Complex reporting</td><td>Can get awkward</td><td class="yes">Natural fit for hand-tuned SQL</td></tr>
+            <tr><td>Large datasets</td><td>Needs care (tracking, paging)</td><td class="yes">Efficient with streaming readers</td></tr>
+            <tr><td>Bulk operations</td><td>Weak by default (needs extensions)</td><td class="yes">Well suited (bulk copy, batching)</td></tr>
+            <tr><td>Maintainability</td><td class="yes">Schema and code stay in sync via migrations</td><td>More boilerplate to maintain</td></tr>
+            <tr><td>Learning curve</td><td>Moderate (LINQ, change tracking)</td><td>Lower conceptually, more verbose</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h3>Best use cases</h3>
+      <p>Reach for <strong>EF Core</strong> as your default for line-of-business CRUD apps, rapid feature development, and anywhere schema and code should evolve together through migrations. Reach for <strong>ADO.NET</strong> (often via a thin repository around a stored procedure) when you need hand-tuned performance on hot-path queries, complex reporting logic that belongs in the database, or bulk data operations at scale. Many real systems use <strong>both</strong>: EF Core for the majority of the app, ADO.NET for a handful of performance-critical paths.</p>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- SECTION 9 -->
+    <!-- ================================================================ -->
+    <section class="doc-section" id="sec9">
+      <div class="section-eyebrow"><span class="num-badge">09</span>Section</div>
+      <h2>Best Practices</h2>
+      <div class="card-grid">
+        <div class="doc-card"><div class="card-icon accent-blue"><svg class="icon"><use href="#i-box"/></svg></div><h4>Dependency Injection</h4><p>Depend on interfaces, not concrete classes. Keep constructors small — too many dependencies is a signal to split the class.</p></div>
+        <div class="doc-card"><div class="card-icon accent-purple"><svg class="icon"><use href="#i-archive"/></svg></div><h4>Repository Pattern</h4><p>Wrap data access behind an interface so business logic never talks to <code>DbContext</code> or <code>SqlConnection</code> directly.</p></div>
+        <div class="doc-card"><div class="card-icon accent-teal"><svg class="icon"><use href="#i-layers"/></svg></div><h4>Service Layer</h4><p>Keep business rules out of PageModels/controllers — put them in services that are easy to unit test in isolation.</p></div>
+        <div class="doc-card"><div class="card-icon accent-green"><svg class="icon"><use href="#i-shield-check"/></svg></div><h4>Authentication &amp; Authorization</h4><p>Prefer policy-based authorization over scattered role-string checks; centralize rules so they're auditable.</p></div>
+        <div class="doc-card"><div class="card-icon accent-blue"><svg class="icon"><use href="#i-db"/></svg></div><h4>Entity Framework</h4><p>Use <code>AsNoTracking()</code> for read-only queries; avoid N+1 queries by eager-loading with <code>Include</code>.</p></div>
+        <div class="doc-card"><div class="card-icon accent-amber"><svg class="icon"><use href="#i-terminal"/></svg></div><h4>ADO.NET</h4><p>Always parameterize input, always wrap connections in <code>using</code>, and wrap multi-step writes in a transaction.</p></div>
+        <div class="doc-card"><div class="card-icon accent-red"><svg class="icon"><use href="#i-bug"/></svg></div><h4>Error Handling</h4><p>Catch specific exceptions, never swallow errors silently, and return consistent, safe error responses to clients.</p></div>
+        <div class="doc-card"><div class="card-icon accent-teal"><svg class="icon"><use href="#i-journal"/></svg></div><h4>Logging</h4><p>Use structured logging (<code>ILogger&lt;T&gt;</code>) with meaningful log levels instead of scattering <code>Console.WriteLine</code>.</p></div>
+        <div class="doc-card"><div class="card-icon accent-purple"><svg class="icon"><use href="#i-hourglass"/></svg></div><h4>Async / Await</h4><p>Use async all the way down for I/O-bound work; never block on async code with <code>.Result</code> or <code>.Wait()</code>.</p></div>
+        <div class="doc-card"><div class="card-icon accent-blue"><svg class="icon"><use href="#i-nodes"/></svg></div><h4>SOLID Principles</h4><p>Single responsibility, small interfaces, and depending on abstractions keep the codebase testable as it grows.</p></div>
+      </div>
+
+      <div class="callout tip">
+        <div class="icon-wrap"><svg class="icon"><use href="#i-check-circle"/></svg></div>
+        <div class="callout-body"><div class="callout-title">Takeaway</div>
+        None of these practices are ASP.NET-specific tricks — they're general software engineering discipline applied consistently. Master them here and they'll carry over to any platform you work in next.</div>
+      </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- SECTION 10 -->
+    <!-- ================================================================ -->
+    <section class="doc-section" id="sec10">
+      <div class="section-eyebrow"><span class="num-badge">10</span>Section</div>
+      <h2>Essential CLI Commands</h2>
+      <p>The <code>dotnet</code> CLI is the tool you'll reach for constantly during day-to-day development — cleaning up build output, compiling your project, and packaging it for deployment. All three commands below are run from your project or solution folder.</p>
+
+      <div class="card-grid">
+        <div class="doc-card"><div class="card-icon accent-red"><svg class="icon"><use href="#i-broom"/></svg></div><h4>dotnet clean</h4><p>Removes the <code>bin/</code> and <code>obj/</code> output from previous builds, so the next build starts from a clean slate.</p></div>
+        <div class="doc-card"><div class="card-icon accent-blue"><svg class="icon"><use href="#i-hammer"/></svg></div><h4>dotnet build</h4><p>Compiles your project (and its dependencies) into assemblies, catching compile errors before you run or deploy anything.</p></div>
+        <div class="doc-card"><div class="card-icon accent-green"><svg class="icon"><use href="#i-rocket"/></svg></div><h4>dotnet publish</h4><p>Produces a self-contained, deployment-ready output folder — optimized and trimmed of anything only needed at dev time.</p></div>
+      </div>
+
+      <h3>dotnet clean</h3>
+      <p>Deletes the intermediate (<code>obj/</code>) and output (<code>bin/</code>) folders produced by earlier builds. Reach for this when you suspect stale build artifacts are causing odd behavior, or before a fresh CI run.</p>
+      <div class="code-block">
+        <div class="code-header"><div class="dots"><span></span><span></span><span></span></div><div class="header-right"><span class="filename">Terminal</span><button class="copy-btn" onclick="copyCode(this)"><svg class="icon"><use href="#i-link"/></svg>Copy</button></div></div>
+        <pre><code class="language-bash">dotnet clean</code></pre>
+      </div>
+
+      <h3>dotnet build</h3>
+      <p>Compiles the project in the current directory (or the one specified) along with all of its dependencies. By default this builds a <strong>Debug</strong> configuration; add <code>-c Release</code> for an optimized build.</p>
+      <div class="code-block">
+        <div class="code-header"><div class="dots"><span></span><span></span><span></span></div><div class="header-right"><span class="filename">Terminal</span><button class="copy-btn" onclick="copyCode(this)"><svg class="icon"><use href="#i-link"/></svg>Copy</button></div></div>
+        <pre><code class="language-bash">dotnet build
+dotnet build -c Release</code></pre>
+      </div>
+
+      <h3>dotnet publish -c Release</h3>
+      <p>Packages the app for deployment: compiles in <strong>Release</strong> configuration, resolves NuGet dependencies, and copies everything the app needs to run into a single output folder — ready to copy to a server, drop into a Docker image, or push to Azure.</p>
+      <div class="code-block">
+        <div class="code-header"><div class="dots"><span></span><span></span><span></span></div><div class="header-right"><span class="filename">Terminal</span><button class="copy-btn" onclick="copyCode(this)"><svg class="icon"><use href="#i-link"/></svg>Copy</button></div></div>
+        <pre><code class="language-bash">dotnet publish -c Release -o ./publish</code></pre>
+      </div>
+      <p>The <code>-o ./publish</code> flag is optional and just controls where the output lands; without it, publish output goes to <code>bin/Release/&lt;tfm&gt;/publish/</code>.</p>
+
+      <h3>Typical local workflow</h3>
+      <div class="diagram">
+        <div class="diagram-row">
+          <div class="dbox alt"><svg class="icon"><use href="#i-broom"/></svg><br>dotnet clean<small>Wipe old output</small></div>
+          <span class="darrow"><svg class="icon"><use href="#i-arrow-right"/></svg></span>
+          <div class="dbox"><svg class="icon"><use href="#i-hammer"/></svg><br>dotnet build<small>Compile &amp; verify</small></div>
+          <span class="darrow"><svg class="icon"><use href="#i-arrow-right"/></svg></span>
+          <div class="dbox green"><svg class="icon"><use href="#i-rocket"/></svg><br>dotnet publish -c Release<small>Package for deployment</small></div>
+        </div>
+      </div>
+
+      <div class="callout tip">
+        <div class="icon-wrap"><svg class="icon"><use href="#i-bulb"/></svg></div>
+        <div class="callout-body"><div class="callout-title">Tip</div>
+        You rarely need <code>dotnet clean</code> for everyday work — <code>dotnet build</code> is incremental and fast. Reach for <code>clean</code> specifically when troubleshooting a build that "shouldn't" be failing, or to guarantee a pristine build in a CI/CD pipeline.</div>
+      </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- SECTION 11 -->
+    <!-- ================================================================ -->
+    <section class="doc-section" id="sec11">
+      <div class="section-eyebrow"><span class="num-badge">11</span>Section</div>
+      <h2>EF Core Migrations to SQL Server</h2>
+      <p><strong>Migrations</strong> are how EF Core keeps your database schema in sync with your C# model classes over time. Instead of hand-writing <code>ALTER TABLE</code> scripts, you change your model, generate a migration, and apply it — and EF Core works out the SQL for you.</p>
+
+      <h3>1. Install the EF Core CLI tool &amp; SQL Server provider</h3>
+      <p>The <code>dotnet ef</code> command is a separate global tool, and your project needs the SQL Server provider package.</p>
+      <div class="code-block">
+        <div class="code-header"><div class="dots"><span></span><span></span><span></span></div><div class="header-right"><span class="filename">Terminal</span><button class="copy-btn" onclick="copyCode(this)"><svg class="icon"><use href="#i-link"/></svg>Copy</button></div></div>
+        <pre><code class="language-bash">dotnet tool install --global dotnet-ef
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+dotnet add package Microsoft.EntityFrameworkCore.Design</code></pre>
+      </div>
+
+      <h3>2. Configure the SQL Server connection string</h3>
+      <div class="code-block">
+        <div class="code-header"><div class="dots"><span></span><span></span><span></span></div><div class="header-right"><span class="filename">appsettings.json</span><button class="copy-btn" onclick="copyCode(this)"><svg class="icon"><use href="#i-link"/></svg>Copy</button></div></div>
+        <pre><code class="language-json">{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=localhost;Database=AppDb;Trusted_Connection=True;TrustServerCertificate=True;"
+  }
+}</code></pre>
+      </div>
+      <div class="code-block">
+        <div class="code-header"><div class="dots"><span></span><span></span><span></span></div><div class="header-right"><span class="filename">Program.cs</span><button class="copy-btn" onclick="copyCode(this)"><svg class="icon"><use href="#i-link"/></svg>Copy</button></div></div>
+        <pre><code class="language-csharp">builder.Services.AddDbContext&lt;AppDbContext&gt;(options =&gt;
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));</code></pre>
+      </div>
+
+      <h3>3. Create and apply a migration</h3>
+      <div class="diagram">
+        <div class="diagram-row">
+          <div class="dbox"><svg class="icon"><use href="#i-nodes"/></svg><br>Model change<small>Edit an entity class</small></div>
+          <span class="darrow"><svg class="icon"><use href="#i-arrow-right"/></svg></span>
+          <div class="dbox alt"><svg class="icon"><use href="#i-refresh"/></svg><br>dotnet ef migrations add<small>Generates a migration file</small></div>
+          <span class="darrow"><svg class="icon"><use href="#i-arrow-right"/></svg></span>
+          <div class="dbox green"><svg class="icon"><use href="#i-db"/></svg><br>dotnet ef database update<small>Applies it to SQL Server</small></div>
+        </div>
+      </div>
+
+      <div class="code-block">
+        <div class="code-header"><div class="dots"><span></span><span></span><span></span></div><div class="header-right"><span class="filename">Terminal</span><button class="copy-btn" onclick="copyCode(this)"><svg class="icon"><use href="#i-link"/></svg>Copy</button></div></div>
+        <pre><code class="language-bash">dotnet ef migrations add InitialCreate
+dotnet ef database update</code></pre>
+      </div>
+      <p><code>migrations add &lt;Name&gt;</code> inspects your <code>DbContext</code> and entity classes, compares them to the last migration snapshot, and writes a new migration file with <code>Up()</code>/<code>Down()</code> methods describing the schema change. <code>database update</code> then executes any pending migrations against the target SQL Server database, creating it first if it doesn't exist yet.</p>
+
+      <h3>Adding a further schema change</h3>
+      <p>Every time you change a model afterward, repeat the same two-step pattern with a new, descriptive migration name.</p>
+      <div class="code-block">
+        <div class="code-header"><div class="dots"><span></span><span></span><span></span></div><div class="header-right"><span class="filename">Terminal</span><button class="copy-btn" onclick="copyCode(this)"><svg class="icon"><use href="#i-link"/></svg>Copy</button></div></div>
+        <pre><code class="language-bash">dotnet ef migrations add AddEmailToUser
+dotnet ef database update</code></pre>
+      </div>
+
+      <h3>Other useful migration commands</h3>
+      <div class="table-wrap">
+        <table class="doc-table">
+          <thead><tr><th>Command</th><th>Purpose</th></tr></thead>
+          <tbody>
+            <tr><td><code>dotnet ef migrations list</code></td><td>Shows every migration and whether it's been applied</td></tr>
+            <tr><td><code>dotnet ef migrations remove</code></td><td>Deletes the most recent, not-yet-applied migration</td></tr>
+            <tr><td><code>dotnet ef database update &lt;MigrationName&gt;</code></td><td>Rolls the database forward or back to a specific migration</td></tr>
+            <tr><td><code>dotnet ef migrations script</code></td><td>Generates a plain SQL script — handy for production deployments via a DBA-reviewed script instead of running <code>dotnet ef</code> directly against prod</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout warning">
+        <div class="icon-wrap"><svg class="icon"><use href="#i-warn"/></svg></div>
+        <div class="callout-body"><div class="callout-title">Production note</div>
+        Avoid running <code>dotnet ef database update</code> directly against a production SQL Server. Generate an idempotent SQL script with <code>dotnet ef migrations script --idempotent</code> and run that through your normal deployment/release pipeline instead, so schema changes are reviewed and reversible.</div>
+      </div>
+    </section>
+
+    <footer class="mt-12 pt-6 border-t flex flex-col sm:flex-row items-center justify-between gap-4 text-xs" style="border-color:var(--border); color:var(--text-muted);">
+      <span>ASP.NET Core Developer Learning Guide — a self-contained training reference.</span>
+      <div class="flex items-center gap-3">
+        <span>Created by <span class="font-semibold" style="color:var(--text-secondary);">muhamaddarulhadi</span></span>
+        <a href="https://github.com/muhamaddarulhadi" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center justify-center w-8 h-8 rounded-full transition-all duration-150 hover:scale-110"
+           style="background:var(--bg-sunken); color:var(--text-secondary);"
+           onmouseover="this.style.background='var(--blue)'; this.style.color='#fff';"
+           onmouseout="this.style.background='var(--bg-sunken)'; this.style.color='var(--text-secondary)';"
+           title="muhamaddarulhadi on GitHub" aria-label="GitHub profile">
+          <svg class="icon icon-fill" style="width:1.05em;height:1.05em;"><use href="#i-github"/></svg>
+        </a>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- ============ TOC ============ -->
+  <aside class="toc">
+    <div class="toc-title">On this page</div>
+    <ul id="tocList">
+      <li><a href="#sec1">01 · What is .NET?</a></li>
+      <li><a href="#sec2">02 · Framework vs Core</a></li>
+      <li><a href="#sec3">03 · Razor Pages</a></li>
+      <li><a href="#sec4">04 · Core Identity</a></li>
+      <li><a href="#sec5">05 · Role Auth &amp; DI</a></li>
+      <li><a href="#sec6">06 · EF Core</a></li>
+      <li><a href="#sec7">07 · ADO.NET</a></li>
+      <li><a href="#sec8">08 · EF vs ADO.NET</a></li>
+      <li><a href="#sec9">09 · Best Practices</a></li>
+      <li><a href="#sec10">10 · CLI Commands</a></li>
+      <li><a href="#sec11">11 · EF Migrations to SQL</a></li>
+    </ul>
+  </aside>
+
+</div>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><svg class="icon"><use href="#i-arrow-up"/></svg></button>
+
+<script>
+/* ===== Theme toggle (with system-preference default) ===== */
+const themeToggle = document.getElementById('themeToggle');
+const themeIconUse = document.getElementById('themeIcon').querySelector('use');
+const root = document.documentElement;
+function applyTheme(theme){
+  root.setAttribute('data-theme', theme);
+  themeIconUse.setAttribute('href', theme === 'dark' ? '#i-sun' : '#i-moon');
+  try { localStorage.setItem('aspnet-guide-theme', theme); } catch(e) {}
+}
+let savedTheme = null;
+try { savedTheme = localStorage.getItem('aspnet-guide-theme'); } catch(e) {}
+if(!savedTheme){
+  savedTheme = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+}
+applyTheme(savedTheme);
+themeToggle.addEventListener('click', () => {
+  applyTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+});
+
+/* ===== Mobile sidebar ===== */
+const sidebar = document.getElementById('sidebar');
+const backdrop = document.getElementById('backdrop');
+const menuToggle = document.getElementById('menuToggle');
+function openSidebar(){ sidebar.classList.add('open'); backdrop.classList.add('show'); }
+function closeSidebar(){ sidebar.classList.remove('open'); backdrop.classList.remove('show'); }
+menuToggle.addEventListener('click', () => {
+  sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
+});
+backdrop.addEventListener('click', closeSidebar);
+sidebar.querySelectorAll('a').forEach(a => a.addEventListener('click', closeSidebar));
+
+/* ===== Back to top + reading progress ===== */
+const backToTop = document.getElementById('backToTop');
+const progressBar = document.getElementById('progressBar');
+function onScroll(){
+  backToTop.classList.toggle('show', window.scrollY > 400);
+  const doc = document.documentElement;
+  const scrollTop = doc.scrollTop || document.body.scrollTop;
+  const scrollHeight = (doc.scrollHeight || document.body.scrollHeight) - doc.clientHeight;
+  const pct = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+  progressBar.style.width = pct + '%';
+}
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+/* ===== Accordion ===== */
+function toggleAcc(btn){
+  const body = btn.nextElementSibling;
+  const isOpen = btn.classList.contains('open');
+  document.querySelectorAll('.acc-header').forEach(h => {
+    h.classList.remove('open');
+    h.nextElementSibling.style.maxHeight = null;
+  });
+  if(!isOpen){
+    btn.classList.add('open');
+    body.style.maxHeight = body.scrollHeight + 'px';
+  }
+}
+
+/* ===== Copy code ===== */
+function copyCode(btn){
+  const block = btn.closest('.code-block').querySelector('code');
+  navigator.clipboard.writeText(block.innerText).then(() => {
+    const label = btn.querySelector('.copy-label') || btn;
+    const original = btn.innerHTML;
+    btn.innerHTML = '<svg class="icon"><use href="#i-check-circle"/></svg>Copied';
+    setTimeout(() => btn.innerHTML = original, 1500);
+  }).catch(() => {});
+}
+
+/* ===== Lightweight built-in syntax highlighter (no external deps) ===== */
+function highlight(code, lang){
+  let s = code
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+  if(lang === 'csharp'){
+    // strings
+    s = s.replace(/(&quot;|")(?:\\.|[^"\\])*"/g, m => `\u0001${m}\u0002`);
+    s = s.replace(/"(?:\\.|[^"\\])*"/g, m => `<span class="tok-str">${m}</span>`);
+    // comments
+    s = s.replace(/(\/\/[^\n]*)/g, '<span class="tok-com">$1</span>');
+    // numbers
+    s = s.replace(/\b(\d+\.?\d*)\b/g, '<span class="tok-num">$1</span>');
+    // keywords
+    const kws = ['public','private','protected','internal','static','readonly','class','void','async','await','using','return','new','if','else','while','for','foreach','in','var','null','true','false','try','catch','throw','get','set','namespace','this','base','override','virtual','abstract','interface','struct','enum','const','out','ref','object','string','int','bool','double','float','decimal','long','short','byte','char'];
+    s = s.replace(new RegExp('\\b(' + kws.join('|') + ')\\b', 'g'), '<span class="tok-kw">$1</span>');
+    // common types (PascalCase heuristics for known framework types)
+    const types = ['SqlConnection','SqlCommand','SqlDataReader','SqlDataAdapter','SqlParameter','SqlTransaction','DataSet','DataTable','PageModel','IActionResult','ILogger','List','Task','IAuthorizationService','AuthorizationService','IUserService','UserService','CommandType','ParameterDirection','SqlDbType'];
+    s = s.replace(new RegExp('\\b(' + types.join('|') + ')\\b', 'g'), '<span class="tok-type">$1</span>');
+  } else if(lang === 'bash'){
+    s = s.replace(/(#[^\n]*)/g, '<span class="tok-com">$1</span>');
+    s = s.replace(/\b(dotnet|tool|ef|add|package|install|--global|-o|-c)\b/g, '<span class="tok-kw">$1</span>');
+    s = s.replace(/\b(clean|build|publish|restore|run|migrations|database|update|list|remove|script)\b/g, '<span class="tok-fn">$1</span>');
+  } else if(lang === 'json'){
+    s = s.replace(/"(?:\\.|[^"\\])*"(?=\s*:)/g, m => `<span class="tok-type">${m}</span>`);
+    s = s.replace(/:(\s*)"(?:\\.|[^"\\])*"/g, m => `<span class="tok-str">${m}</span>`);
+  } else if(lang === 'html'){
+    s = s.replace(/(&lt;\/?[a-zA-Z][\w-]*)/g, '<span class="tok-kw">$1</span>');
+    s = s.replace(/([a-zA-Z-]+)(=)(&quot;|")/g, '<span class="tok-type">$1</span>$2$3');
+  }
+
+  return s;
+}
+document.querySelectorAll('pre code[class*="language-"]').forEach(block => {
+  const lang = block.className.replace('language-', '').trim();
+  block.innerHTML = highlight(block.textContent, lang);
+});
+
+/* ===== Scroll-spy for sidebar + TOC + section reveal ===== */
+const sections = document.querySelectorAll('section.doc-section[id]');
+const sidebarLinks = document.querySelectorAll('.sidebar a.nav-link');
+const tocLinks = document.querySelectorAll('.toc a');
+
+const spy = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('in-view');
+      const id = entry.target.getAttribute('id');
+      sidebarLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + id));
+      tocLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + id));
+    }
+  });
+}, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
+sections.forEach(s => spy.observe(s));
+
+const reveal = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){ entry.target.classList.add('in-view'); reveal.unobserve(entry.target); }
+  });
+}, { threshold: 0.05 });
+sections.forEach(s => reveal.observe(s));
+
+/* ===== Simple in-page search ===== */
+const searchInput = document.getElementById('searchInput');
+searchInput.addEventListener('keydown', (e) => {
+  if(e.key === 'Enter'){
+    const term = searchInput.value.trim().toLowerCase();
+    if(!term) return;
+    const match = Array.from(document.querySelectorAll('.doc-section h2, .doc-section h3'))
+      .find(h => h.textContent.toLowerCase().includes(term));
+    if(match) match.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+});
+</script>
+</body>
+</html>
